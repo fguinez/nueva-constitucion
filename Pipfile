@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 pypdf2 = "*"
+tweepy = "*"
+python-dotenv = "*"
 
 [dev-packages]
 ipykernel = "*"
