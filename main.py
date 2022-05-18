@@ -30,12 +30,12 @@ def print(*args, add_time=True, **kwargs):
 
 
 class Bot:
-    def __init__(self):
+    def __init__(self, max_len=280):
         # Twitter
         auth_twitter = tweepy.OAuthHandler(env['API_KEY'], env['API_KEY_SECRET'])
         auth_twitter.set_access_token(env['ACCESS_TOKEN'], env['ACCESS_TOKEN_SECRET'])
         self.twitter = tweepy.API(auth_twitter)
-
+        self.max_len = max_len
         self.read_ultimo_publicado()
 
     def read_ultimo_publicado(self):
@@ -68,7 +68,7 @@ class Bot:
         Publica un artículo.
         '''
         print(f"Publicando artículo {self.ultimo_publicado+1}...", end=' ')
-        tweets = get_tweets(article)
+        tweets = get_tweets(article, self.max_len)
         actual_status = None
         for tweet_text in tweets:
             actual_status = self.tweet(tweet_text, actual_status)
@@ -80,14 +80,18 @@ class Bot:
         '''
         Ejecuta el programa.
         '''
-        with open("borrador_nueva_constitución.txt", 'r') as file:
-            text = file.read()
-            arts = re.split("-"*50, text)
+        arts = get_arts("borrador_nueva_constitución.txt")
         arts = arts[self.ultimo_publicado+1:]
         for art in arts[:3]:
             self.post_art(art)
 
 
+
+def get_arts(filename):
+    with open(filename, 'r') as file:
+        text = file.read()
+        arts = re.split("\n\n", text)
+    return arts
 
 def get_tweets(art, max_len=280):
     '''
@@ -106,16 +110,19 @@ def get_tweets(art, max_len=280):
     clauses = art.split('\n')
     # Se recorren los incisos
     i = 0
+    i_new = 0
     while i < len(clauses):
         actual_tweet = clauses[i]
         # Si el inciso es corto, se intenta añadir otro inciso en el mismo tweet
         if len(actual_tweet) <= max_len:
             actual_tweet_new = actual_tweet
-            while len(actual_tweet_new) < max_len and i < len(clauses):
+            i_new = i
+            while len(actual_tweet_new) < max_len and i_new < len(clauses):
                 actual_tweet = actual_tweet_new
-                i += 1
-                if i < len(clauses):
-                    actual_tweet_new += '\n' + clauses[i]
+                i = i_new
+                i_new += 1
+                if i_new < len(clauses):
+                    actual_tweet_new += '\n' + clauses[i_new]
             tweets.append(actual_tweet)
         # Si el inciso es muy largo, se divide en varios tweets
         else:
@@ -148,5 +155,22 @@ def get_incise_tweets(incise, max_len):
 
 
 if __name__ == "__main__":
-    bot = Bot()
-    bot.run()
+    #bot = Bot(max_len = 280)
+    #bot.run()
+    arts = get_arts('borrador_nueva_constitución.txt')
+    print(len(arts))
+    for art in arts[400:401]:
+        print(art)
+        print()
+        tweets = get_tweets(art)
+        print(len(tweets))
+        print()
+        print(tweets)
+        print()
+        for tweet in tweets:
+            print(tweet, add_time=False)
+            print('|', add_time=False)
+        print()
+        print()
+        print()
+        print()
