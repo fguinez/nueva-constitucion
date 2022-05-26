@@ -32,9 +32,13 @@ def print(*args, add_time=True, **kwargs):
 class Bot:
     def __init__(self, max_len=280):
         # Twitter
-        auth_twitter = tweepy.OAuthHandler(env['API_KEY'], env['API_KEY_SECRET'])
-        auth_twitter.set_access_token(env['ACCESS_TOKEN'], env['ACCESS_TOKEN_SECRET'])
-        self.twitter = tweepy.API(auth_twitter)
+        self.twitter = tweepy.Client(
+            bearer_token        = env['BEARER_TOKEN'],
+            consumer_key        = env['API_KEY'],
+            consumer_secret     = env['API_KEY_SECRET'],
+            access_token        = env['ACCESS_TOKEN'],
+            access_token_secret = env['ACCESS_TOKEN_SECRET'],
+        )
         self.max_len = max_len
         self.read_ultimo_publicado()
 
@@ -43,35 +47,31 @@ class Bot:
             with open('tmp/ultimo_publicado,txt', 'r') as f:
                 self.ultimo_publicado = int(f.readline().strip())
         except FileNotFoundError:
-            self.ultimo_publicado = -1
-        return self.ultimo_publicado
-
+            self.ultimo_publicado = 0
+        if not self.ultimo_publicado:
+            self.ultimo_publicado = 0
+        return self.ultimo_publica
     def write_ultimo_publicado(self):
         os.makedirs("tmp", exist_ok=True)
         with open('tmp/ultimo_publicado,txt', 'w') as f:
             f.write(str(self.ultimo_publicado))
     
-    def tweet(self, text, in_reply_to_status):
+    def tweet(self, text, parent_tweet):
         '''
-        Twittea un texto.
+        Twittea un texto. Retorna el id del tweet generado.
         '''
-        # Si el tweet debe ser una respuesta a otro tweet:
-        if in_reply_to_status:
-            status = self.twitter.update_status(status=text, in_reply_to_status_id=in_reply_to_status.id, auto_populate_reply_metadata=True)
-        # En caso contrario:
-        else:
-            status = self.twitter.update_status(status=text)
-        return status
+        response = self.twitter.create_tweet(text=text, in_reply_to_tweet_id=parent_tweet)
+        return response.data['id']
 
-    def post_art(self, article):
+    def post_article(self, article):
         '''
         Publica un artículo.
         '''
         print(f"Publicando artículo {self.ultimo_publicado+1}...", end=' ')
         tweets = get_tweets(article, self.max_len)
-        actual_status = None
+        actual_tweet = None
         for tweet_text in tweets:
-            actual_status = self.tweet(tweet_text, actual_status)
+            actual_tweet = self.tweet(tweet_text, parent_tweet=actual_tweet)
         print(f"Publicado!", add_time=False)
         self.ultimo_publicado += 1
         self.write_ultimo_publicado()
@@ -82,8 +82,8 @@ class Bot:
         '''
         arts = get_arts("borrador_nueva_constitución.txt")
         arts = arts[self.ultimo_publicado+1:]
-        for art in arts[:3]:
-            self.post_art(art)
+        for art in arts[:2]:
+            self.post_article(art)
 
 
 
@@ -155,8 +155,9 @@ def get_incise_tweets(incise, max_len):
 
 
 if __name__ == "__main__":
-    #bot = Bot(max_len = 280)
-    #bot.run()
+    bot = Bot(max_len = 280)
+    bot.run()
+    exit()
     arts = get_arts('borrador_nueva_constitución.txt')
     print(len(arts))
     for art in arts[400:401]:
