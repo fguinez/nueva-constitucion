@@ -1,6 +1,7 @@
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,vim,python,jupyternotebooks,sublimetext,macos,linux,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,vim,python,jupyternotebooks,sublimetext,macos,linux,windows
+tmp
 
 ## Links
 *.webloc
