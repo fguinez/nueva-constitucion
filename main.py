@@ -47,31 +47,6 @@ class Bot:
         self.max_len = max_len
         self.read_ultimo_publicado()
 
-    @property
-    def post_datetimes(self):
-        '''
-        Devuelve una lista con las fechas de publicación de los artículos.
-        '''
-        workday = btd.WorkDayRule(
-            start_time=dt.time(self.init_active_time),
-            end_time=dt.time(self.end_active_time % 24),
-            working_days=[0, 1, 2, 3, 4, 5, 6]
-        )
-        hours_rules = btd.Rules([workday])
-        init_time = dt.datetime.now()
-        active_hours = hours_rules.difference(init_time, self.end_date).timedelta
-        post_delta = active_hours / len(self.arts)
-        actual_time = init_time + (post_delta / 2)
-        for _ in self.arts:
-            if actual_time.hour >= self.end_active_time:
-                actual_time += dt.timedelta(days=1)
-                new_hour = self.init_active_time + actual_time.hour - self.end_active_time
-                actual_time = actual_time.replace(hour=new_hour)
-            elif actual_time.hour < self.init_active_time:
-                actual_time = actual_time.replace(hour=self.init_active_time)
-            yield actual_time
-            actual_time += post_delta
-
     def read_ultimo_publicado(self):
         try:
             with open('tmp/ultimo_publicado,txt', 'r') as f:
@@ -86,6 +61,41 @@ class Bot:
         os.makedirs("tmp", exist_ok=True)
         with open('tmp/ultimo_publicado,txt', 'w') as f:
             f.write(str(self.ultimo_publicado))
+
+    def get_post_datetimes(self):
+        '''
+        Devuelve una lista con las fechas de publicación de los artículos.
+        '''
+        workday = btd.WorkDayRule(
+            start_time=dt.time(self.init_active_time),
+            end_time=dt.time(self.end_active_time % 24),
+            working_days=[0, 1, 2, 3, 4, 5, 6]
+        )
+        hours_rules = btd.Rules([workday])
+        init_time = dt.datetime.now()
+        active_hours = hours_rules.difference(init_time, self.end_date).timedelta
+        post_delta = active_hours / len(self.arts)
+        times = []
+        actual_time = init_time + (post_delta / 2)
+        for _ in self.arts:
+            if actual_time.hour >= self.end_active_time:
+                actual_time += dt.timedelta(days=1)
+                new_hour = self.init_active_time + actual_time.hour - self.end_active_time
+                actual_time = actual_time.replace(hour=new_hour)
+            elif actual_time.hour < self.init_active_time:
+                actual_time = actual_time.replace(hour=self.init_active_time)
+            times.append(actual_time)
+            actual_time += post_delta
+        return times
+
+    def write_post_datetimes(self):
+        '''
+        Escribe las fechas de publicación en un archivo temporal.
+        '''
+        os.makedirs("tmp", exist_ok=True)
+        with open('tmp/post_datetimes.txt', 'w') as f:
+            for i, post_datetime in enumerate(self.post_datetimes, start=1):
+                f.write(f"art {i:03} | {post_datetime.strftime('%m-%d-%Y %H:%M:%S')}\n")
 
     def tweet(self, text, parent_tweet):
         '''
@@ -113,6 +123,8 @@ class Bot:
         '''
         arts = get_arts("borrador_nueva_constitución.txt")
         self.arts = arts[self.ultimo_publicado+1:]
+        self.post_datetimes = self.get_post_datetimes()
+        self.write_post_datetimes()
         for art, post_datetime in zip(self.arts, self.post_datetimes):
             pause.until(post_datetime)
             self.post_article(art)
