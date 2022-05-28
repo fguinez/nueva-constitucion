@@ -52,7 +52,7 @@ class Bot:
 
     def read_next_article(self):
         try:
-            with open('tmp/next_article,txt', 'r') as f:
+            with open('tmp/next_article.txt', 'r') as f:
                 self.next_article = int(f.readline().strip())
         except FileNotFoundError:
             self.next_article = 0
