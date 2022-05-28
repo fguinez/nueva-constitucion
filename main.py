@@ -32,7 +32,7 @@ def print(*args, add_time=True, **kwargs):
 
 
 class Bot:
-    def __init__(self, end_date, init_active_time, end_active_time, max_len=280):
+    def __init__(self, filename, end_date, init_active_time, end_active_time, max_len=280):
         # Twitter
         self.twitter = tweepy.Client(
             bearer_token        = env['BEARER_TOKEN'],
@@ -41,6 +41,7 @@ class Bot:
             access_token        = env['ACCESS_TOKEN'],
             access_token_secret = env['ACCESS_TOKEN_SECRET'],
         )
+        self.filename = filename
         self.end_date = end_date
         self.init_active_time = init_active_time
         self.end_active_time = end_active_time
@@ -121,7 +122,7 @@ class Bot:
         '''
         Ejecuta el programa.
         '''
-        arts = get_arts("borrador_nueva_constitución.txt")
+        arts = get_arts(self.filename)
         self.arts = arts[self.next_article:]
         self.post_datetimes = self.get_post_datetimes()
         self.write_post_datetimes()
@@ -200,28 +201,12 @@ def get_incise_tweets(incise, max_len):
 
 
 if __name__ == "__main__":
+    # Archivo a leer
+    filename = "borrador_nueva_constitución.txt"
     # Fecha en la que se publica el último tweet
     end_date = dt.datetime(2022, 6, 29)
     # Los tweets solo se publican entre init_active_time y end_active_time
     init_active_time = 8
     end_active_time =  24
-    bot = Bot(end_date, init_active_time, end_active_time, max_len = 280)
+    bot = Bot(filename, end_date, init_active_time, end_active_time, max_len = 280)
     bot.run()
-    exit()
-    arts = get_arts('borrador_nueva_constitución.txt')
-    print(len(arts))
-    for art in arts[400:401]:
-        print(art)
-        print()
-        tweets = get_tweets(art)
-        print(len(tweets))
-        print()
-        print(tweets)
-        print()
-        for tweet in tweets:
-            print(tweet, add_time=False)
-            print('|', add_time=False)
-        print()
-        print()
-        print()
-        print()
