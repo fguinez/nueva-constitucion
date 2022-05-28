@@ -1,9 +1,11 @@
 from dotenv import dotenv_values
 from textwrap import wrap
+import businesstimedelta as btd
 import datetime as dt
 import builtins
 import argparse
 import tweepy
+import pause
 import re
 import os
 
@@ -30,7 +32,7 @@ def print(*args, add_time=True, **kwargs):
 
 
 class Bot:
-    def __init__(self, max_len=280):
+    def __init__(self, end_date, init_active_time, end_active_time, max_len=280):
         # Twitter
         self.twitter = tweepy.Client(
             bearer_token        = env['BEARER_TOKEN'],
@@ -39,8 +41,36 @@ class Bot:
             access_token        = env['ACCESS_TOKEN'],
             access_token_secret = env['ACCESS_TOKEN_SECRET'],
         )
+        self.end_date = end_date
+        self.init_active_time = init_active_time
+        self.end_active_time = end_active_time
         self.max_len = max_len
         self.read_ultimo_publicado()
+
+    @property
+    def post_datetimes(self):
+        '''
+        Devuelve una lista con las fechas de publicación de los artículos.
+        '''
+        workday = btd.WorkDayRule(
+            start_time=dt.time(self.init_active_time),
+            end_time=dt.time(self.end_active_time % 24),
+            working_days=[0, 1, 2, 3, 4, 5, 6]
+        )
+        hours_rules = btd.Rules([workday])
+        init_time = dt.datetime.now()
+        active_hours = hours_rules.difference(init_time, self.end_date).timedelta
+        post_delta = active_hours / len(self.arts)
+        actual_time = init_time + (post_delta / 2)
+        for _ in self.arts:
+            if actual_time.hour >= self.end_active_time:
+                actual_time += dt.timedelta(days=1)
+                new_hour = self.init_active_time + actual_time.hour - self.end_active_time
+                actual_time = actual_time.replace(hour=new_hour)
+            elif actual_time.hour < self.init_active_time:
+                actual_time = actual_time.replace(hour=self.init_active_time)
+            yield actual_time
+            actual_time += post_delta
 
     def read_ultimo_publicado(self):
         try:
@@ -50,12 +80,13 @@ class Bot:
             self.ultimo_publicado = 0
         if not self.ultimo_publicado:
             self.ultimo_publicado = 0
-        return self.ultimo_publica
+        return self.ultimo_publicado
+
     def write_ultimo_publicado(self):
         os.makedirs("tmp", exist_ok=True)
         with open('tmp/ultimo_publicado,txt', 'w') as f:
             f.write(str(self.ultimo_publicado))
-    
+
     def tweet(self, text, parent_tweet):
         '''
         Twittea un texto. Retorna el id del tweet generado.
@@ -81,9 +112,11 @@ class Bot:
         Ejecuta el programa.
         '''
         arts = get_arts("borrador_nueva_constitución.txt")
-        arts = arts[self.ultimo_publicado+1:]
-        for art in arts[:2]:
+        self.arts = arts[self.ultimo_publicado+1:]
+        for art, post_datetime in zip(self.arts, self.post_datetimes):
+            pause.until(post_datetime)
             self.post_article(art)
+            
 
 
 
@@ -105,7 +138,7 @@ def get_tweets(art, max_len=280):
     # En caso contrario, se calculan los tweets necesarios
     tweets = []
     # Se resta de max_len es espacio necesario para codificar el índice de cada tweet
-    max_len -= len(" (XX/XX)")
+    max_len -= len("\n\n[XX/XX]")
     # Se separa el artículo en incisos
     clauses = art.split('\n')
     # Se recorren los incisos
@@ -130,7 +163,7 @@ def get_tweets(art, max_len=280):
             tweets.extend(incise_tweets)
         i += 1
     # Añadimos el índice de cada tweet
-    tweets = list(tweet + f" ({i}/{len(tweets)})" for i, tweet in enumerate(tweets, start=1))
+    tweets = list(tweet + f"\n\n[{i}/{len(tweets)}]" for i, tweet in enumerate(tweets, start=1))
     return tweets
 
 def get_incise_tweets(incise, max_len):
@@ -155,7 +188,12 @@ def get_incise_tweets(incise, max_len):
 
 
 if __name__ == "__main__":
-    bot = Bot(max_len = 280)
+    # Fecha en la que se publica el último tweet
+    end_date = dt.datetime(2022, 6, 29)
+    # Los tweets solo se publican entre init_active_time y end_active_time
+    init_active_time = 8
+    end_active_time =  24
+    bot = Bot(end_date, init_active_time, end_active_time, max_len = 280)
     bot.run()
     exit()
     arts = get_arts('borrador_nueva_constitución.txt')
