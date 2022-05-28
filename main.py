@@ -207,7 +207,7 @@ if __name__ == "__main__":
     # Archivo a leer
     filename = "borrador_nueva_constitución.txt"
     # Fecha en la que se publica el último tweet
-    end_date = dt.datetime(2022, 6, 29)
+    end_date = dt.datetime(2022, 6, 29, 23, 30, 0)
     # Los tweets solo se publican entre init_active_time y end_active_time
     init_active_time = 8
     end_active_time =  24
