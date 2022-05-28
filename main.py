@@ -62,7 +62,7 @@ class Bot:
 
     def write_next_article(self):
         os.makedirs("tmp", exist_ok=True)
-        with open('tmp/next_article,txt', 'w') as f:
+        with open('tmp/next_article.txt', 'w') as f:
             f.write(str(self.next_article))
 
     def get_post_datetimes(self):
