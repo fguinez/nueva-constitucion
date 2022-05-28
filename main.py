@@ -47,6 +47,8 @@ class Bot:
         self.end_active_time = end_active_time
         self.max_len = max_len
         self.read_next_article()
+        self.post_datetimes = None
+        self.interval = None
 
     def read_next_article(self):
         try:
@@ -75,9 +77,9 @@ class Bot:
         hours_rules = btd.Rules([workday])
         init_time = dt.datetime.now()
         active_hours = hours_rules.difference(init_time, self.end_date).timedelta
-        post_delta = active_hours / len(self.arts)
+        self.interval = active_hours / len(self.arts)
         times = []
-        actual_time = init_time + (post_delta / 2)
+        actual_time = init_time + (self.interval / 2)
         for _ in self.arts:
             if actual_time.hour >= self.end_active_time:
                 actual_time += dt.timedelta(days=1)
@@ -86,7 +88,7 @@ class Bot:
             elif actual_time.hour < self.init_active_time:
                 actual_time = actual_time.replace(hour=self.init_active_time)
             times.append(actual_time)
-            actual_time += post_delta
+            actual_time += self.interval
         return times
 
     def write_post_datetimes(self):
@@ -126,6 +128,7 @@ class Bot:
         self.arts = arts[self.next_article:]
         self.post_datetimes = self.get_post_datetimes()
         self.write_post_datetimes()
+        print("Intervalo de publicación:", self.interval)
         for art, post_datetime in zip(self.arts, self.post_datetimes):
             pause.until(post_datetime)
             self.post_article(art)
