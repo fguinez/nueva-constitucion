@@ -45,22 +45,22 @@ class Bot:
         self.init_active_time = init_active_time
         self.end_active_time = end_active_time
         self.max_len = max_len
-        self.read_ultimo_publicado()
+        self.read_next_article()
 
-    def read_ultimo_publicado(self):
+    def read_next_article(self):
         try:
-            with open('tmp/ultimo_publicado,txt', 'r') as f:
-                self.ultimo_publicado = int(f.readline().strip())
+            with open('tmp/next_article,txt', 'r') as f:
+                self.next_article = int(f.readline().strip())
         except FileNotFoundError:
-            self.ultimo_publicado = 0
-        if not self.ultimo_publicado:
-            self.ultimo_publicado = 0
-        return self.ultimo_publicado
+            self.next_article = 0
+        if not self.next_article:
+            self.next_article = 0
+        return self.next_article
 
-    def write_ultimo_publicado(self):
+    def write_next_article(self):
         os.makedirs("tmp", exist_ok=True)
-        with open('tmp/ultimo_publicado,txt', 'w') as f:
-            f.write(str(self.ultimo_publicado))
+        with open('tmp/next_article,txt', 'w') as f:
+            f.write(str(self.next_article))
 
     def get_post_datetimes(self):
         '''
@@ -108,21 +108,21 @@ class Bot:
         '''
         Publica un artículo.
         '''
-        print(f"Publicando artículo {self.ultimo_publicado+1}...", end=' ')
+        print(f"Publicando artículo {self.next_article+1}...", end=' ')
         tweets = get_tweets(article, self.max_len)
         actual_tweet = None
         for tweet_text in tweets:
             actual_tweet = self.tweet(tweet_text, parent_tweet=actual_tweet)
         print(f"Publicado!", add_time=False)
-        self.ultimo_publicado += 1
-        self.write_ultimo_publicado()
+        self.next_article += 1
+        self.write_next_article()
 
     def run(self, verbose=False):
         '''
         Ejecuta el programa.
         '''
         arts = get_arts("borrador_nueva_constitución.txt")
-        self.arts = arts[self.ultimo_publicado+1:]
+        self.arts = arts[self.next_article:]
         self.post_datetimes = self.get_post_datetimes()
         self.write_post_datetimes()
         for art, post_datetime in zip(self.arts, self.post_datetimes):
