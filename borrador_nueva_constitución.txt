@@ -97,7 +97,7 @@ El Congreso de Diputadas y Diputados y la Cámara de las Regiones tomarán sus d
 
 23.- Artículo 19.- La o el reemplazante deberá reunir los requisitos establecidos por esta Constitución para ser elegido en el cargo respectivo y le alcanzarán las inhabilidades establecidas en el artículo 14 y las incompatibilidades del artículo 15. Se asegurará a todo evento la composición paritaria del órgano.
 
-24.- Artículo 20.-Las diputadas, diputados y representantes regionales son inviolables por las opiniones que manifiesten y los votos que emitan en el desempeño de sus cargos.
+24.- Artículo 20.- Las diputadas, diputados y representantes regionales son inviolables por las opiniones que manifiesten y los votos que emitan en el desempeño de sus cargos.
 Desde el día de su elección o investidura, ningún diputado, diputada o representante regional puede ser acusado o privado de libertad, salvo el caso de delito flagrante, si la Corte de Apelaciones de la jurisdicción respectiva, en pleno, no declara previamente haber lugar a la formación de causa. En contra de las resoluciones que al respecto dictaren estas Cortes podrá apelarse ante la Corte Suprema.
 En caso de que un diputado, diputada o representante regional sea detenido por delito flagrante, será puesto inmediatamente a disposición de la Corte de Apelaciones respectiva, con la información sumaria correspondiente. La Corte procederá conforme a lo dispuesto en el inciso anterior.
 Desde el momento en que se declare, por resolución firme, haber lugar a formación de causa, el diputado, diputada o representante regional quedará suspendido de su cargo y sujeto al juez competente.
@@ -189,7 +189,7 @@ La Cámara contará con sesenta días desde que recibe el proyecto para formular
 En ningún caso se admitirán las observaciones que no tengan relación directa con las ideas matrices o fundamentales del proyecto, a menos que hubieran sido consideradas en el mensaje respectivo.
 Las observaciones parciales podrán ser aprobadas por mayoría. Con el mismo quórum, el Congreso podrá insistir en el proyecto original.
 Si el Presidente hubiere rechazado totalmente el proyecto, el Congreso deberá desecharlo, salvo que insista por tres quintos de sus integrantes.
-Si la Presidenta o Presidente de la República no devolviere el proyecto dentro de treinta días, contados desde la fecha de su remisión, se entenderá́ que lo aprueba y se promulgará como ley. La promulgación deberá́ hacerse siempre dentro del plazo de diez días, contados desde que ella sea procedente. La publicación se hará́ dentro de los cinco días hábiles siguientes a la fecha en que quede totalmente tramitado el decreto promulgatorio.
+Si la Presidenta o Presidente de la República no devolviere el proyecto dentro de treinta días, contados desde la fecha de su remisión, se entenderá que lo aprueba y se promulgará como ley. La promulgación deberá hacerse siempre dentro del plazo de diez días, contados desde que ella sea procedente. La publicación se hará dentro de los cinco días hábiles siguientes a la fecha en que quede totalmente tramitado el decreto promulgatorio.
 
 40.- Artículo 33.- El proyecto que fuere desechado en general por el Congreso de Diputadas y Diputados, no podrá renovarse sino después de un año.
 
@@ -226,10 +226,10 @@ Si a la elección se presentaren más de dos candidaturas y ninguna de ellas obt
 El día de la elección presidencial será feriado irrenunciable.
 En caso de muerte de uno o de ambos candidatos o candidatas presidenciales a que se refiere el inciso segundo, la o el Presidente de la República convocará a una nueva elección dentro del plazo de diez días, contado desde la fecha del deceso. La elección se celebrará noventa días después de la convocatoria si ese día correspondiere a un domingo. En caso contrario, se realizará el domingo siguiente.
 
-50.- Artículo 43.- El proceso de calificación de la elección de la o el Presidente deberá́ quedar concluido dentro de los quince días siguientes a la primera votación y dentro de los treinta siguientes a la segunda.
+50.- Artículo 43.- El proceso de calificación de la elección de la o el Presidente deberá quedar concluido dentro de los quince días siguientes a la primera votación y dentro de los treinta siguientes a la segunda.
 El Tribunal Calificador de Elecciones comunicará de inmediato al Congreso de Diputadas y Diputados y a la Cámara de las Regiones la proclamación de la Presidenta o Presidente electo.
 El Congreso de Diputadas y Diputados y la Cámara de las Regiones, reunidos en sesión conjunta el día en que deba cesar en su cargo el o la Presidenta en funciones, y con las y los miembros que asistan, tomará conocimiento de esa resolución del Tribunal Calificador de Elecciones y proclamará a el o la electa.
-En este mismo acto, la Presidenta o Presidente prestará promesa o juramento de desempeñar fielmente su cargo, conservar la independencia de la República, guardar y hacer guardar la Constitución y las leyes, y de inmediato asumirá́ sus funciones.
+En este mismo acto, la Presidenta o Presidente prestará promesa o juramento de desempeñar fielmente su cargo, conservar la independencia de la República, guardar y hacer guardar la Constitución y las leyes, y de inmediato asumirá sus funciones.
 
 51.- Artículo 44.- Si la o el Presidente electo se hallare impedido para tomar posesión del cargo, asumirá, provisoriamente y con el título de Vicepresidente o Vicepresidenta de la República, la o el Presidente del Congreso de Diputadas y Diputados, de la Cámara de las Regiones o de la Corte Suprema, en ese orden.
 Si el impedimento fuese absoluto o durase indefinidamente, la Vicepresidenta o Vicepresidente, en los diez días siguientes al acuerdo del Congreso de Diputadas y Diputados, convocará a una nueva elección presidencial que se celebrará noventa días después si ese día correspondiere a un domingo, o el domingo inmediatamente siguiente. La o el Presidente así elegido asumirá sus funciones en la oportunidad que señale la ley y durará en ellas el resto del período ya iniciado.
@@ -450,11 +450,11 @@ El Estado debe adoptar una administración ecológicamente responsable y promove
 
 108.- Artículo 9 A.- Principio de Buen Vivir. El Estado reconoce y promueve una relación de equilibrio armónico entre las personas, la naturaleza y la organización de la sociedad.
 
-109.- Artículo 9G. Principio de responsabilidad ambiental. Quien dañe el medio ambiente tendrá el deber de repararlo, sin perjuicio de las sanciones administrativas, penales y civiles que correspondan en conformidad a la constitución y las leyes.
+109.- Artículo 9 G.- Principio de responsabilidad ambiental. Quien dañe el medio ambiente tendrá el deber de repararlo, sin perjuicio de las sanciones administrativas, penales y civiles que correspondan en conformidad a la constitución y las leyes.
 
 110.- Artículo 9 M.- Chile es un país oceánico. Es deber integral del Estado la conservación, preservación y cuidado de los ecosistemas marinos y costeros continentales, insulares y antárticos.
 
-111.- Artículo 10 (G). Recepción e integración del derecho internacional de los Derechos Humanos. Los derechos y obligaciones establecidos en los tratados internacionales de derechos humanos ratificados por Chile y que se encuentren vigentes, los principios generales del derecho internacional de los derechos humanos y el derecho internacional consuetudinario de la misma materia forman parte integral de esta constitución y gozan de rango constitucional.
+111.- Artículo 10 (G).- Recepción e integración del derecho internacional de los Derechos Humanos. Los derechos y obligaciones establecidos en los tratados internacionales de derechos humanos ratificados por Chile y que se encuentren vigentes, los principios generales del derecho internacional de los derechos humanos y el derecho internacional consuetudinario de la misma materia forman parte integral de esta constitución y gozan de rango constitucional.
 El Estado tiene la obligación de promover, respetar, proteger y garantizar los derechos humanos conforme a las disposiciones y principios del derecho internacional de los derechos humanos. Asimismo, debe prevenir, investigar, sancionar y reparar integralmente las violaciones a los derechos humanos.
 
 112.- Artículo 11.- Interculturalidad. El Estado es intercultural. Reconocerá, valorará y promoverá el diálogo horizontal y transversal entre las diversas cosmovisiones de los pueblos y naciones que conviven en el país con dignidad y respeto recíproco. El Estado deberá garantizar los mecanismos institucionales que permitan ese diálogo superando las asimetrías existentes en el acceso, distribución y ejercicio del poder y en todos los ámbitos de la vida en sociedad.
@@ -467,7 +467,7 @@ El Estado reconoce la lengua de señas chilena como lengua natural y oficial de 
 115.- Artículo 14.- Probidad y Transparencia. El ejercicio de las funciones públicas obliga a sus titulares a dar estricto cumplimiento a los principios de probidad, transparencia y rendición de cuentas en todas sus actuaciones, con primacía del interés general por sobre el particular.
 Es deber del Estado promover la integridad de la función pública y erradicar la corrupción en todas sus formas, tanto en el sector público como privado. En cumplimiento de lo anterior, deberá adoptar medidas eficaces para prevenir, detectar y sancionar los actos de corrupción. Esta obligación abarca el deber de perseguir administrativa y judicialmente la aplicación de las sanciones administrativas, civiles y penales que correspondan, en la forma que determine la ley.
 Una ley regulará los casos y las condiciones en las que los funcionarios, funcionarias y autoridades deleguen a terceros la administración de aquellos bienes y obligaciones que supongan un conflicto de interés en el ejercicio de la función pública. Asimismo, podrá considerar otras medidas apropiadas para resolverlos.
-La Constitución asegura a todas las personas la transparencia de la información pública en poder del Estado facilitando su acceso de manera comprensible y oportuna, en los plazos y condiciones que la ley establezca. Esta señalará́ la forma en que podrá ordenarse la reserva o secreto de dicha información, por razones de seguridad del Estado, protección de los derechos de las personas o cuando su publicidad afectare el debido cumplimiento de las funciones de la respectiva institución, conforme a sus fines.
+La Constitución asegura a todas las personas la transparencia de la información pública en poder del Estado facilitando su acceso de manera comprensible y oportuna, en los plazos y condiciones que la ley establezca. Esta señalará la forma en que podrá ordenarse la reserva o secreto de dicha información, por razones de seguridad del Estado, protección de los derechos de las personas o cuando su publicidad afectare el debido cumplimiento de las funciones de la respectiva institución, conforme a sus fines.
 
 116.- Artículo 15.- Supremacía Constitucional y Legal. Chile es un Estado fundado en el principio de la supremacía constitucional y el respeto irrestricto a los derechos humanos. Los preceptos de esta Constitución obligan igualmente a toda persona, institución, autoridad o grupo.
 Los órganos del Estado y sus titulares e integrantes, actúan previa investidura regular y someten su actuar a la Constitución y a las normas dictadas conforme a esta, dentro de los límites y competencias por ellas establecidos.
@@ -750,7 +750,7 @@ Su integración, organización, funcionamiento y atribuciones serán establecida
 
 185.- Artículo 13.- Del Estatuto Comunal. Cada Comuna Autónoma tendrá un Estatuto Comunal elaborado y discutido por el Concejo Municipal correspondiente, que establecerá la organización administrativa y funcionamiento de los órganos comunales, los mecanismos de democracia vecinal y las normas de elaboración de ordenanzas comunales. Todo lo anterior se entenderá sin perjuicio de los mínimos generales que establezca la ley respectiva para todas las comunas autónomas.
 
-186.- Artículo 14.-De las competencias de la comuna autónoma. La comuna autónoma cuenta con todas las potestades y competencias de autogobierno para satisfacer las necesidades de la comunidad local.
+186.- Artículo 14.- De las competencias de la comuna autónoma. La comuna autónoma cuenta con todas las potestades y competencias de autogobierno para satisfacer las necesidades de la comunidad local.
 Son competencias esenciales de la comuna autónoma:
 1. El desarrollo estratégico de la comuna mediante el plan de desarrollo comunal.
 2. La prestación de los servicios públicos que determine la ley.
@@ -898,7 +898,7 @@ Este organismo contará con un consejo consultivo cuya integración considerará
 225.- Artículo 35.- El Estado reconoce la ruralidad como una expresión territorial donde las formas de vida y producción se desarrollan en torno a la relación directa de las personas y comunidades con la tierra, el agua y el mar.
 El Estado promoverá el desarrollo integral de los territorios rurales.
 
-226.-Artículo 36.- El Estado y las entidades territoriales facilitarán la participación de las comunidades rurales a nivel local y regional en el diseño e implementación de programas y políticas públicas que les afectan o conciernen.
+226.- Artículo 36.- El Estado y las entidades territoriales facilitarán la participación de las comunidades rurales a nivel local y regional en el diseño e implementación de programas y políticas públicas que les afectan o conciernen.
 
 227.- Artículo 37.- El Estado fomentará los mercados locales, ferias libres y circuitos cortos de comercialización e intercambio de bienes y productos relacionados a la ruralidad.
 
@@ -908,15 +908,15 @@ El Estado promoverá el desarrollo integral de los territorios rurales.
 
 230.- Artículo 45.- El Estado tomará las medidas necesarias para prevenir la violencia y superar las desigualdades que afrontan mujeres y niñas rurales, promoviendo la implementación de políticas públicas para garantizar su acceso igualitario a los derechos que esta Constitución consagra.
 
-231.-Artículo 46.- El Estado es garante de la conectividad del país en coordinación con los gobiernos regionales.
+231.- Artículo 46.- El Estado es garante de la conectividad del país en coordinación con los gobiernos regionales.
 Se fomentará la conectividad regional con especial atención a territorios aislados, rurales y de difícil acceso.
 
-232.-Artículo 47.- La designación de las y los representantes de los Ministerios y Servicios Públicos con presencia en la Región Autónoma será decisión de la Presidencia de la República.
+232.- Artículo 47.- La designación de las y los representantes de los Ministerios y Servicios Públicos con presencia en la Región Autónoma será decisión de la Presidencia de la República.
 
 233.- Artículo 48.- Las regiones autónomas, para el cumplimiento de sus funciones, podrán establecer sus plantas de personal y las unidades de su estructura interna, en conformidad a la Constitución y la ley.
 Estas facultades serán ejercidas por el Gobernador o Gobernadora Regional, previo acuerdo de la Asamblea Regional, cautelando la carrera funcionaria, su debido financiamiento y el carácter técnico y profesional de dichos empleos.
 
-234.-Artículo 50.- Atribuciones de la Asamblea Regional. Son atribuciones de la Asamblea Regional, en conformidad a la Constitución, la ley y el Estatuto Regional:
+234.- Artículo 50.- Atribuciones de la Asamblea Regional. Son atribuciones de la Asamblea Regional, en conformidad a la Constitución, la ley y el Estatuto Regional:
 1. Pronunciarse sobre la convocatoria a consultas o plebiscitos regionales.
 2. Administrar sus bienes y patrimonio propio.
 3. Aprobar, rechazar o modificar la inversión de los recursos de los fondos solidarios que se creen y otros recursos públicos que disponga la ley.
@@ -929,7 +929,7 @@ Los planes de ordenamiento y planificación contemplarán los impactos que los u
 
 236.- Artículo 55.- De las instituciones estatales de educación superior. En cada región existirá, al menos, una universidad estatal y una institución de formación técnico profesional de nivel superior estatal. Estas se relacionarán de manera coordinada y preferente con las entidades territoriales y servicios públicos con presencia regional, de acuerdo a las necesidades locales.
 
-237.-Artículo 56.- Los Cuerpos de Bomberos de Chile son una institución perteneciente al sistema de protección civil, cuyo objeto es atender las emergencias causadas por la naturaleza o el ser humano, sin perjuicio de la competencia específica que tengan otros organismos públicos y/o privados.
+237.- Artículo 56.- Los Cuerpos de Bomberos de Chile son una institución perteneciente al sistema de protección civil, cuyo objeto es atender las emergencias causadas por la naturaleza o el ser humano, sin perjuicio de la competencia específica que tengan otros organismos públicos y/o privados.
 Será deber del Estado dar cobertura financiera para cubrir la totalidad de sus gastos operacionales, capacitación y equipos, como también otorgar cobertura médica a su personal por accidentes o enfermedades contraídas por actos de servicio.
 La ley regulará el régimen de financiamiento y prestaciones sociales en época de vejez e invalidez.
 Los Cuerpos de Bomberos de Chile se sujetarán en todas sus actuaciones a los principios de probidad, transparencia y rendición de cuentas.
@@ -997,7 +997,7 @@ El propietario siempre tendrá derecho a que se le indemnice por el justo precio
 El pago deberá efectuarse de forma previa a la toma de posesión material del bien expropiado y la persona expropiada siempre podrá reclamar de la legalidad del acto expropiatorio, así como del monto y modalidad de pago ante los tribunales que determine la ley.
 Cualquiera sea la causa invocada para llevar a cabo la expropiación siempre deberá estar debidamente fundada.
 
-257.- Artículo 21. Derecho a las tierras, territorios y recursos. El Estado reconoce y garantiza conforme a la Constitución, el derecho de los pueblos y naciones indígenas a sus tierras, territorios y recursos.
+257.- Artículo 21.- Derecho a las tierras, territorios y recursos. El Estado reconoce y garantiza conforme a la Constitución, el derecho de los pueblos y naciones indígenas a sus tierras, territorios y recursos.
 La propiedad de las tierras indígenas goza de especial protección. El Estado establecerá instrumentos jurídicos eficaces para su catastro, regularización, demarcación, titulación, reparación y restitución.
 La restitución constituye un mecanismo preferente de reparación, de utilidad pública e interés general.
 Conforme a la constitución y la ley, los pueblos y naciones indígenas tienen derecho a utilizar los recursos que tradicionalmente han usado u ocupado, que se encuentran en sus territorios y sean indispensables para su existencia colectiva.
@@ -1027,7 +1027,7 @@ La ley podrá imponer restricciones específicas al ejercicio de este derecho re
 Se garantiza el derecho a votar en las elecciones de carácter nacional, presidenciales, parlamentarias, plebiscitos y consultas, de conformidad a esta Constitución y las leyes.
 En caso de crisis humanitaria y demás situaciones que determine la ley, el Estado asegurará la reunificación familiar y el retorno voluntario al territorio nacional.
 
-267.- Artículo 50.-Derecho de petición. Toda persona tiene derecho a presentar peticiones, exposiciones o reclamaciones ante cualquier autoridad del Estado.
+267.- Artículo 50.- Derecho de petición. Toda persona tiene derecho a presentar peticiones, exposiciones o reclamaciones ante cualquier autoridad del Estado.
 La ley regulará los plazos y la forma en que la autoridad deberá dar respuesta a lo solicitado, además de la manera en que se garantizará el principio de plurilingüismo en el ejercicio de este derecho.
 
 268.- Artículo 1.- Las víctimas de graves violaciones a los derechos humanos tienen derecho a la reparación integral.
@@ -1099,7 +1099,7 @@ El Sistema Nacional de Salud será financiado a través de las rentas generales 
 
 281.- Artículo 16.- Todas las personas tienen derecho a la educación. La educación es un deber primordial e ineludible del Estado.
 La educación es un proceso de formación y aprendizaje permanente a lo largo de la vida, indispensable para el ejercicio de los demás derechos y para la actividad científica, tecnológica, económica y cultural del país. Sus fines son la construcción del bien común, la justicia social, el respeto de los derechos humanos y de la naturaleza, la conciencia ecológica, la convivencia democrática entre los pueblos, la prevención de la violencia y discriminación, así como, la adquisición de conocimientos, el pensamiento crítico y el desarrollo integral de las personas, considerando su dimensión cognitiva, física, social y emocional.
-La educación se regirá́ por los principios de cooperación, no discriminación, inclusión, justicia, participación, solidaridad, interculturalidad, enfoque de género, pluralismo y los demás principios consagrados en esta Constitución. Tendrá un carácter no sexista y se desarrollará de forma contextualizada, considerando la pertinencia territorial, cultural y lingüística.
+La educación se regirá por los principios de cooperación, no discriminación, inclusión, justicia, participación, solidaridad, interculturalidad, enfoque de género, pluralismo y los demás principios consagrados en esta Constitución. Tendrá un carácter no sexista y se desarrollará de forma contextualizada, considerando la pertinencia territorial, cultural y lingüística.
 La educación deberá orientarse hacia la calidad, entendida como el cumplimiento de los fines y principios establecidos de la educación.
 La ley establecerá la forma en que estos fines y principios deberán materializarse, en condiciones de equidad en las instituciones educativas y los procesos de enseñanza.
 
@@ -1148,7 +1148,7 @@ El Estado deberá adoptar todas las medidas necesarias, incluidos los ajustes ra
 Los órganos del Estado deberán tener especialmente en consideración los casos en que confluyan, respecto de una persona, más de una categoría, condición o criterio de los señalados en el inciso segundo.
 La Constitución asegura a todas las personas la igualdad ante la ley.
 
-292.- Artículo 24.-Toda persona y pueblo tiene el derecho a comunicarse en su propia lengua en todo espacio. Todos los habitantes del territorio nacional tienen derecho a usar las lenguas. Ninguna persona o grupo podrá ser discriminado por razones lingüísticas.
+292.- Artículo 24.- Toda persona y pueblo tiene el derecho a comunicarse en su propia lengua en todo espacio. Todos los habitantes del territorio nacional tienen derecho a usar las lenguas. Ninguna persona o grupo podrá ser discriminado por razones lingüísticas.
 
 293.- Artículo 25.- Derecho a la consulta de los pueblos y naciones indígenas. Los pueblos y naciones indígenas tienen el derecho a ser consultados previamente a la adopción de medidas administrativas y legislativas que les afectasen. El Estado garantiza los medios para la efectiva participación de éstos, a través de sus instituciones representativas, de forma previa y libre, mediante procedimientos apropiados, informados y de buena fe.
 
@@ -1158,7 +1158,7 @@ El Estado velará por la satisfacción de este derecho atendiendo las necesidade
 295.- Artículo 27.- Derecho a la autodeterminación informativa. Toda persona tiene derecho a la protección de los datos personales. Este derecho comprende la facultad de acceder a los datos recogidos que le conciernen, ser informada y oponerse al tratamiento de sus datos y a obtener su rectificación, cancelación y portabilidad, sin perjuicio de otros que establezca la ley.
 El tratamiento de datos personales sólo podrá efectuarse en los casos que establezca la ley, sujetándose a los principios de licitud, lealtad, calidad, transparencia, seguridad, limitación de la finalidad y minimización de datos.
 
-296.- Artículo 1. Crisis climática y ecológica. Es deber del Estado adoptar acciones de prevención, adaptación, y mitigación de los riesgos, vulnerabilidades y efectos provocados por la crisis climática y ecológica.
+296.- Artículo 1.- Crisis climática y ecológica. Es deber del Estado adoptar acciones de prevención, adaptación, y mitigación de los riesgos, vulnerabilidades y efectos provocados por la crisis climática y ecológica.
 El Estado promoverá el diálogo, cooperación y solidaridad internacional para adaptarse, mitigar y afrontar la crisis climática y ecológica y proteger la Naturaleza.
 
 297.- Artículo 4.- De los derechos de la Naturaleza. La Naturaleza tiene derecho a que se respete y proteja su existencia, a la regeneración, a la mantención y a la restauración de sus funciones y equilibrios dinámicos, que comprenden los ciclos naturales, los ecosistemas y la biodiversidad.
@@ -1181,14 +1181,14 @@ Respecto de aquellos bienes comunes naturales que se encuentren en el dominio pr
 
 304.- Artículo 20.- De la gestión de residuos. Es deber del Estado normar y fomentar la gestión, reducción y valorización de residuos, en la forma que determine la Ley.
 
-305.- Artículo 23. De los animales. Los animales son sujetos de especial protección. El Estado los protegerá, reconociendo su sintiencia y el derecho a vivir una vida libre de maltrato.
+305.- Artículo 23.- De los animales. Los animales son sujetos de especial protección. El Estado los protegerá, reconociendo su sintiencia y el derecho a vivir una vida libre de maltrato.
 El Estado y sus organismos promoverán una educación basada en la empatía y en el respeto hacia los animales.
 
 306.- Artículo 23B.- El Estado protege la biodiversidad, debiendo preservar, conservar y restaurar el hábitat de las especies nativas silvestres, en tal cantidad y distribución que sostenga adecuadamente la viabilidad de sus poblaciones y asegure las condiciones para su supervivencia y no extinción.
 
-307.- Artículo 26. - Principios ambientales. Son principios para la protección de la Naturaleza y el medio ambiente, a lo menos, los principios de progresividad, precautorio, preventivo, justicia ambiental, solidaridad intergeneracional, responsabilidad y acción climática justa.
+307.- Artículo 26.- Principios ambientales. Son principios para la protección de la Naturaleza y el medio ambiente, a lo menos, los principios de progresividad, precautorio, preventivo, justicia ambiental, solidaridad intergeneracional, responsabilidad y acción climática justa.
 
-308.- Artículo 33. Democracia ambiental. Se reconoce el derecho de participación informada en materias ambientales. Los mecanismos de participación serán determinados por ley.
+308.- Artículo 33.- Democracia ambiental. Se reconoce el derecho de participación informada en materias ambientales. Los mecanismos de participación serán determinados por ley.
 Todas las personas tienen derecho a acceder a la información ambiental que conste en poder o custodia del Estado. Los particulares deberán entregar la información ambiental relacionada con su actividad, en los términos que establezca la ley.
 
 309.- Artículo 1.- El Estado debe proteger las aguas, en todos sus estados y fases, y su ciclo hidrológico. El agua es esencial para la vida y el ejercicio de los derechos humanos y de la Naturaleza.
@@ -1236,11 +1236,11 @@ La exploración, explotación y aprovechamiento de estas sustancias se sujetará
 
 326.- Artículo 24.- Quedarán excluidos de toda actividad minera los glaciares, las áreas protegidas, las que por razones de protección hidrográfica establezca la ley, y las demás que ella declare.
 
-327.- Artículo Nuevo. Lo dispuesto en el inciso primero del artículo 22 no se aplicará a las arcillas superficiales.
+327.- Artículo Nuevo.- Lo dispuesto en el inciso primero del artículo 22 no se aplicará a las arcillas superficiales.
 
 328.- Artículo 25.- El Estado deberá regular los impactos y efectos sinérgicos generados en las distintas etapas de la actividad minera, incluyendo su encadenamiento productivo, cierre o paralización, en la forma que establezca la ley. Será obligación de quien realice la actividad minera destinar recursos para reparar los daños causados, los pasivos ambientales y mitigar sus efectos nocivos en los territorios en que ésta se desarrolla, de acuerdo a la ley. La ley especificará el modo en que esta obligación se aplicará a la pequeña minería y pirquineros.
 
-329.- Artículo 28 A bis. El Estado adoptará las medidas necesarias para proteger la pequeña minería y pirquineros, las fomentará y facilitará el acceso y uso de las herramientas, tecnologías y recursos para el ejercicio tradicional y sustentable de la actividad.
+329.- Artículo 28 A bis.- El Estado adoptará las medidas necesarias para proteger la pequeña minería y pirquineros, las fomentará y facilitará el acceso y uso de las herramientas, tecnologías y recursos para el ejercicio tradicional y sustentable de la actividad.
 
 330.- Artículo 30.- Es deber del Estado contribuir y cooperar internacionalmente en la investigación del espacio con fines pacíficos y científicos.
 El Estado impulsará medidas para conservar la atmósfera y el cielo nocturno, según las necesidades territoriales.
@@ -1254,7 +1254,7 @@ El Estado fomentará la innovación, los mercados locales, los circuitos cortos 
 Las empresas públicas se deberán crear por ley y se regirán por el régimen jurídico que ésta determine.
 Sin perjuicio de esto, en lo pertinente, serán aplicables las normas de derecho público sobre probidad y rendición de cuentas.
 
-333.- Artículo nuevo. El Estado tendrá el deber de fijar una Política Nacional Portuaria, la cual se organizará en torno a los principios de eficiencia en el uso del borde costero; responsabilidad ambiental, poniendo especial énfasis en el cuidado de la naturaleza y bienes comunes naturales; la participación pública de los recursos que genere la actividad; la vinculación con territorios y comunidades donde se emplacen los recintos portuarios; establecimiento de la carrera profesional portuaria, reconociéndose como trabajo de alto riesgo; y la colaboración entre recintos e infraestructura portuaria para asegurar el oportuno abastecimiento de las comunidades.
+333.- Artículo nuevo.- El Estado tendrá el deber de fijar una Política Nacional Portuaria, la cual se organizará en torno a los principios de eficiencia en el uso del borde costero; responsabilidad ambiental, poniendo especial énfasis en el cuidado de la naturaleza y bienes comunes naturales; la participación pública de los recursos que genere la actividad; la vinculación con territorios y comunidades donde se emplacen los recintos portuarios; establecimiento de la carrera profesional portuaria, reconociéndose como trabajo de alto riesgo; y la colaboración entre recintos e infraestructura portuaria para asegurar el oportuno abastecimiento de las comunidades.
 
 334.- Artículo 43.- El Estado debe prevenir y sancionar los abusos en los mercados.
 
@@ -1343,7 +1343,7 @@ La presidencia de la Corte Suprema será ejercida por una persona elegida por su
 
 365.- Artículo 13.- De las Cortes de Apelaciones. Las Cortes de Apelaciones son órganos colegiados con jurisdicción sobre una región o parte de ella, cuya función principal es resolver las impugnaciones que se interpongan contra resoluciones de los tribunales de instancia, así como las demás competencias que establezca la Constitución y la ley.
 Funcionarán en pleno o en salas preferentemente especializadas.
-La presidencia de cada Corte de Apelaciones será́ ejercida por una persona elegida por sus pares. Durará́ en sus funciones dos años
+La presidencia de cada Corte de Apelaciones será ejercida por una persona elegida por sus pares. Durará en sus funciones dos años
 
 366.- Artículo 14.- De los Tribunales de Instancia. Son tribunales de instancia los civiles, penales, de ejecución de penas, de familia, laborales, administrativos, ambientales, de competencia común o mixtos, vecinales y demás que establezca la ley.
 La competencia de estos tribunales y el número de juezas o jueces que los integrarán serán determinados por la ley.
@@ -1469,7 +1469,7 @@ d) Designar al Director Ejecutivo Nacional.
 e) Proponer al Fiscal Nacional las ternas para el nombramiento de los fiscales adjuntos.
 f) Las demás atribuciones que establezca la Constitución y la ley.
 
-392.-Artículo 10.- Del Comité del Ministerio Público. Existirá un Comité del Ministerio Público, integrado por las y los fiscales regionales y la o el Fiscal Nacional, quien lo presidirá.
+392.- Artículo 10.- Del Comité del Ministerio Público. Existirá un Comité del Ministerio Público, integrado por las y los fiscales regionales y la o el Fiscal Nacional, quien lo presidirá.
 El Comité deberá fijar la política de persecución penal y los criterios de actuación para el cumplimiento de dichos objetivos, debiendo siempre velar por la transparencia y objetividad, resguardando los intereses de la sociedad y el respeto de los derechos humanos.
 
 393.- Artículo 11.- Fiscales adjuntos del Ministerio Público. Existirán fiscales adjuntos del Ministerio Público quienes ejercerán su labor en los casos específicos que se les asignen, conforme a lo establecido en la Constitución y las leyes.
@@ -1832,7 +1832,7 @@ Asimismo, la Constitución asegura la protección a los derechos de intérpretes
 
 482.- Artículo 11.- El acceso a la información pública será garantizado con la sola excepción de aquellas materias que la ley determine reservada o secreta.
 
-483.- Artículo nuevo- La Constitución reconoce los derechos culturales del Pueblo Tribal Afrodescendiente chileno, y asegura su ejercicio, desarrollo, promoción, conservación y protección, con pleno respeto a los instrumentos internacionales pertinentes.
+483.- Artículo nuevo.- La Constitución reconoce los derechos culturales del Pueblo Tribal Afrodescendiente chileno, y asegura su ejercicio, desarrollo, promoción, conservación y protección, con pleno respeto a los instrumentos internacionales pertinentes.
 
 484.- Artículo 16.- Deber del Estado. Es deber del Estado preservar la memoria y garantizar el acceso a los archivos y documentos, en sus distintos soportes y contenidos.
 Los sitios de memoria y memoriales serán objeto de especial protección, asegurando su preservación y sostenibilidad.
