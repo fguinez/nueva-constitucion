@@ -16,6 +16,8 @@ env = dotenv_values(".env")
 parser = argparse.ArgumentParser()
 parser.add_argument("-v", "--verbose", default=False, action='store_true',
                     help='Imprime el avance del programa (default: False)')
+parser.add_argument("-t", "--twitter", default=False, action='store_true',
+                    help='Publica en Twitter (default: False)')
 arguments = parser.parse_args()
 
 
@@ -34,13 +36,14 @@ def print(*args, add_time=True, **kwargs):
 class Bot:
     def __init__(self, filename, end_date, init_active_time, end_active_time, max_len=280):
         # Twitter
-        self.twitter = tweepy.Client(
-            bearer_token        = env['BEARER_TOKEN'],
-            consumer_key        = env['API_KEY'],
-            consumer_secret     = env['API_KEY_SECRET'],
-            access_token        = env['ACCESS_TOKEN'],
-            access_token_secret = env['ACCESS_TOKEN_SECRET'],
-        )
+        if arguments.twitter:
+            self.twitter = tweepy.Client(
+                bearer_token        = env['BEARER_TOKEN'],
+                consumer_key        = env['API_KEY'],
+                consumer_secret     = env['API_KEY_SECRET'],
+                access_token        = env['ACCESS_TOKEN'],
+                access_token_secret = env['ACCESS_TOKEN_SECRET'],
+            )
         self.filename = filename
         self.end_date = end_date
         self.init_active_time = init_active_time
@@ -107,18 +110,25 @@ class Bot:
         response = self.twitter.create_tweet(text=text, in_reply_to_tweet_id=parent_tweet)
         return response.data['id']
 
-    def post_article(self, article):
+    def post_twitter(self, article):
         '''
-        Publica un artículo.
+        Publica un artículo en Twitter.
         '''
-        print(f"Publicando artículo {self.next_article+1}...", end=' ')
+        print(f"Publicando artículo {self.next_article+1} en Twitter...", end=' ')
         tweets = get_tweets(article, self.max_len)
         actual_tweet = None
         for tweet_text in tweets:
             actual_tweet = self.tweet(tweet_text, parent_tweet=actual_tweet)
         print(f"Publicado!", add_time=False)
+
+    def post_article(self, article):
+        '''
+        Publica un artículo en todas las redes sociales pedidas.
+        '''
+        if arguments.twitter:
+            self.post_twitter(article)
         self.next_article += 1
-        self.write_next_article()
+        self.write_next_article()     
 
     def run(self, verbose=False):
         '''
