@@ -11,7 +11,7 @@ Los artículos son publicados periódicamente en:
 
 El código en [`main.py`](https://github.com/fguinez/nueva-constitucion/blob/main/main.py) contiene la clase `Bot`, la cual recibe como parámetros:
 
-- `filename`; Nombre del archivo que contiene los artículos divididos por doble saltos de línea.
+- `filename`: Nombre del archivo que contiene los artículos divididos por doble saltos de línea.
 - `end_date`: Una fecha en formato `datetime.date` que indica la fecha en la cual se deben terminar de postear los artículos.
 - `init_active_time`: Una hora en formato `int` que indica la hora mínima en la cual se pueden realizar posts.
 - `end_active_time`: Una hora en formato `int` que indica la hora máxima en la cual se pueden realizar posts.
