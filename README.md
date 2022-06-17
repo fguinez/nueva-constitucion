@@ -42,8 +42,10 @@ ACCESS_TOKEN_SECRET=[YOUR-ACCESS-TOKEN-SECRET]
 
 Una vez que cumplas con los requisitos de más arriba, basta con ejecutar:
 ```
-python main.py
+python main.py --twitter
 ```
+
+Alternativamente, puedes añadir el parámetro --verbose para revisar en pantalla los avances de la ejecución.
 
 ## Licencia
 
