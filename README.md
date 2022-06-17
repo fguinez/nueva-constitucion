@@ -16,6 +16,8 @@ El código en [`main.py`](https://github.com/fguinez/nueva-constitucion/blob/mai
 - `init_active_time`: Una hora en formato `int` que indica la hora mínima en la cual se pueden realizar posts.
 - `end_active_time`: Una hora en formato `int` que indica la hora máxima en la cual se pueden realizar posts.
 
+De momento, puedes modificar los valores de estos parámetros en la instanciación de `Bot` que se realiza [al final de `main.py`](https://github.com/fguinez/nueva-constitucion/blob/main/main.py#L216).
+
 En base a este información, el método `run` del objeto `Bot`:
 1. Obtiene artículos desde `filename`.
 2. Calcula la fecha de posteo de cada artículo. Se definen intervalos de tiempo equidistantes entre cada posteo, dividiendo las horas disponibles entre el instante actual y `end_date` por el número de artículos.
@@ -23,7 +25,7 @@ En base a este información, el método `run` del objeto `Bot`:
 
 ## Requerimientos
 
-Puedes utilizar [pipenv](https://pypi.org/project/pipenv/) para instalar las dependencias de este proyecto. El comando `pipenv sync`instalará:
+Puedes utilizar [pipenv](https://pypi.org/project/pipenv/) para instalar las dependencias de este proyecto. El comando `pipenv sync` instalará:
 - [`tweepy`](https://pypi.org/project/tweepy/)
 - [`python-dotenv`](https://pypi.org/project/python-dotenv/)
 - [`pause`](https://pypi.org/project/pause/)
@@ -45,7 +47,7 @@ Una vez que cumplas con los requisitos de más arriba, basta con ejecutar:
 python main.py --twitter
 ```
 
-Alternativamente, puedes añadir el parámetro --verbose para revisar en pantalla los avances de la ejecución.
+Alternativamente, puedes añadir el parámetro `--verbose` para revisar en pantalla los avances de la ejecución.
 
 ## Licencia
 
