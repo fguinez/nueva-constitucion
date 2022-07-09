@@ -167,7 +167,7 @@ class Bot:
         info, art = art.split('\n', 1)
         n_chapter, header = info.split(',')
         # Se obtiene la información del capítulo correspondiente
-        chapter = self.chapters[n_chapter]
+        chapter = self.chapters.get(n_chapter, Chapther('🇨🇱', 'Propuesta de Constitución Política de la República de Chile'))
         # Se añade el emoji del capítulo al inicio del artículo
         art = f"{chapter.emoji} {art}"
         # Si el artículo es muy corto, se devuelve un solo tweet
@@ -295,5 +295,17 @@ if __name__ == "__main__":
     init_active_time = 8
     end_active_time =  24
     bot = Bot(filename, end_date, init_active_time, end_active_time, max_len=280, chapters_filename=chapters_filename)
+
+    # Descomentar para probar separación en tweets en terminal
+    # import random
+    # arts = get_arts(filename)
+    # bot.arts = arts
+    # # random art
+    # n = random.randint(0, len(arts))
+    # tweets = bot.get_tweets(arts[n])
+    # for tweet in tweets:
+    #     print(tweet, add_time=False)
+    #     print("-"*80, add_time=False)
+    # exit()
 
     bot.run()
