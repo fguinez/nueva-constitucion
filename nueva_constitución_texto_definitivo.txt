@@ -178,7 +178,7 @@ Artículo 33
 
 2,
 Artículo 34
-Los pueblos y naciones indígenas y sus integrantes, en virtud de su libre determinación, tienen derecho al pleno ejercicio de sus derechos colectivos e individuales. En especial, tienen derecho a la autonomía; al autogobierno; a su propia cultura; a la identidad y cosmovisión; al patrimonio; a la lengua; al reconocimiento y protección de sus tierras, territorios y recursos, en su dimensión material e inmaterial y al especial vinculo que mantienen con estos; a la cooperación e integración; al reconocimiento de sus instituciones, jurisdicciones y autoridades, propias o tradicionales; y a participar plenamente, si así́ lo desean, en la vida política, económica, social y cultural del Estado.
+Los pueblos y naciones indígenas y sus integrantes, en virtud de su libre determinación, tienen derecho al pleno ejercicio de sus derechos colectivos e individuales. En especial, tienen derecho a la autonomía; al autogobierno; a su propia cultura; a la identidad y cosmovisión; al patrimonio; a la lengua; al reconocimiento y protección de sus tierras, territorios y recursos, en su dimensión material e inmaterial y al especial vinculo que mantienen con estos; a la cooperación e integración; al reconocimiento de sus instituciones, jurisdicciones y autoridades, propias o tradicionales; y a participar plenamente, si así́ lo desean, en la vida política, económica, social y cultural del Estado.
 
 2,
 Artículo 35
@@ -1055,14 +1055,12 @@ Artículo 179
 5,
 Artículo 180
 1. La Dirección del Servicio Civil es un órgano autónomo, con personalidad jurídica y patrimonio propio, encargado del fortalecimiento de la función pública y de los procedimientos de selección de cargos en la Administración pública y demás entidades que establezcan la Constitución y la ley, resguardando los principios de transparencia, objetividad, no discriminación y mérito. Sus atribuciones no afectarán las competencias que, en el ámbito de la gestión, correspondan a las autoridades y jefaturas de los servicios públicos. La ley regulará su organización y demás atribuciones.
-2. Esta Dirección regulará los procesos de selección de candidatas y candidatos
-a cargos del Sistema de Alta Dirección Pública, o de aquellos que deben seleccionarse con su participación, y conducir los concursos destinados a proveer cargos de jefaturas superiores de servicios, a través de un Consejo de Alta Dirección Pública.
+2. Esta Dirección regulará los procesos de selección de candidatas y candidatos a cargos del Sistema de Alta Dirección Pública, o de aquellos que deben seleccionarse con su participación, y conducir los concursos destinados a proveer cargos de jefaturas superiores de servicios, a través de un Consejo de Alta Dirección Pública.
 
 5,
 Artículo 181
 1. Los cuerpos de bomberos de Chile conforman una institución perteneciente al sistema de protección civil, cuyo objeto es atender las emergencias causadas por la naturaleza o el ser humano, sin perjuicio de la competencia específica que tengan otros organismos públicos y/o privados.
-2. El Estado deberá dar cobertura financiera para cubrir la totalidad de sus gastos operacionales, capacitación y equipos, como también otorgar cobertura médica a su personal por accidentes o enfermedades contraídas
-por actos de servicio.
+2. El Estado deberá dar cobertura financiera para cubrir la totalidad de sus gastos operacionales, capacitación y equipos, como también otorgar cobertura médica a su personal por accidentes o enfermedades contraídas por actos de servicio.
 3. Los cuerpos de bomberos de Chile se sujetarán en todas sus actuaciones a los principios de probidad, transparencia y rendición de cuentas.
 
 5,
@@ -1332,8 +1330,7 @@ c) Proponer a la asamblea regional la creación de empresas públicas regionales
 d) Preparar y presentar ante la asamblea regional el plan regional de ordenamiento territorial y los planes de desarrollo urbano de las áreas metropolitanas, en conformidad con el estatuto regional y la ley.
 e) Presentar ante la asamblea regional los planes de manejo integrado de cuencas acordados en los respectivos consejos de cuencas, en conformidad con la ley.
 f) Convocar a referendos y plebiscitos regionales en virtud de lo previsto en la Constitución, el estatuto regional y la ley.
-g) Establecer sistemas de gestión de crisis entre los órganos que tienen
-iento en la región autónoma, que incluyan, a lo menos, su preparación, prevención, administración y manejo.
+g) Establecer sistemas de gestión de crisis entre los órganos que tienen asiento en la región autónoma, que incluyan, a lo menos, su preparación, prevención, administración y manejo.
 h) Preparar y presentar ante la asamblea regional el plan de desarrollo regional, conforme al estatuto regional.
 i) Celebrar actos y contratos en los que tenga interés.
 j) Adoptar e implementar políticas públicas que fomenten y promocionen el desarrollo social, productivo, económico y cultural de la región autónoma, especialmente en ámbitos de competencia de la región autónoma.
@@ -1498,8 +1495,7 @@ Artículo 248
 6,Autonomía fiscal
 Artículo 249
 1. La Administración y las entidades territoriales deben contribuir a la corrección de las desigualdades que existan entre ellas.
-2. La ley establecerá fondos de compensación para las entidades territoriales
-con una menor capacidad fiscal. El órgano competente, sobre la base de criterios objetivos, sugerirá al legislador los recursos que deberán ser integrados a estos fondos.
+2. La ley establecerá fondos de compensación para las entidades territoriales con una menor capacidad fiscal. El órgano competente, sobre la base de criterios objetivos, sugerirá al legislador los recursos que deberán ser integrados a estos fondos.
 3. La ley establecerá un fondo de contingencia y estabilización macroeconómica para garantizar los recursos de las entidades territoriales ante fluctuaciones de ingresos ordinarios.
 4. En virtud de la solidaridad interterritorial, la Administración central deberá realizar transferencias directas incondicionales a las entidades territoriales que cuenten con ingresos fiscales inferiores a la mitad del promedio ponderado de estas.
 5. Las regiones y comunas autónomas que cuenten con ingresos por sobre el promedio ponderado de ingresos fiscales transferirán recursos a aquellas equivalentes con ingresos bajo el promedio. El órgano competente sugerirá una fórmula al legislador para realizar tales transferencias.
@@ -1575,8 +1571,7 @@ Artículo 257
 
 7,Disposiciones comunes al Poder Legislativo
 Artículo 258
-1. No pueden postular al Congreso de Diputadas y Diputados ni a la Cámara de
-las Regiones:
+1. No pueden postular al Congreso de Diputadas y Diputados ni a la Cámara de las Regiones:
 a) Quien ejerza la Presidencia de la República o quien le subrogue en el ejercicio de la Presidencia al tiempo de la elección.
 b) Las ministras y los ministros de Estado y las subsecretarias y los subsecretarios.
 c) Las autoridades regionales y comunales de elección popular.
@@ -1702,13 +1697,7 @@ o) Las que regulen la protección del medioambiente.
 p) Las que regulen las votaciones populares y escrutinios.
 q) Las que regulen las organizaciones políticas.
 r) Las demás que esta Constitución califique como de acuerdo regional.
-2. Si se generara un conflicto de competencia entre la Cámara de las Regiones
-y el Congreso de Diputadas y Diputados con relación a si una o más materias
-dispuestas en este artículo deben ser revisadas por la Cámara de las
-Regiones, esta aprobará su competencia por mayoría de sus integrantes y el
-Congreso lo ratificará por mayoría. En caso de que el Congreso rechace la
-revisión aprobada por la Cámara de las Regiones, esta podrá recurrir a la
-Corte Constitucional por acuerdo de mayoría.
+2. Si se generara un conflicto de competencia entre la Cámara de las Regiones y el Congreso de Diputadas y Diputados con relación a si una o más materias dispuestas en este artículo deben ser revisadas por la Cámara de las Regiones, esta aprobará su competencia por mayoría de sus integrantes y el Congreso lo ratificará por mayoría. En caso de que el Congreso rechace la revisión aprobada por la Cámara de las Regiones, esta podrá recurrir a la Corte Constitucional por acuerdo de mayoría.
 
 7,Procedimiento legislativo
 Artículo 269
@@ -1769,10 +1758,8 @@ Artículo 277
 4. Aprobado el proyecto por la comisión especial de presupuestos, será enviado al Congreso de Diputadas y Diputados para su tramitación como ley de acuerdo regional.
 5. La estimación del rendimiento de los recursos que consulta la Ley de Presupuestos y de los nuevos que establezca cualquiera otra iniciativa de ley corresponderá a quien ejerza la Presidencia de la República, previo informe de los organismos técnicos respectivos, sin perjuicio de las atribuciones de la Secretaría de Presupuestos del Congreso y de la Cámara.
 6. No se podrá aprobar ningún nuevo gasto con cargo al erario público sin que se indiquen, al mismo tiempo, las fuentes de recursos necesarios para atender dicho gasto. La Ley de Presupuestos no puede crear tributos ni beneficios tributarios.
-7. Si la fuente de recursos otorgada por el Congreso de Diputadas y Diputados fuera insuficiente para financiar cualquier nuevo gasto que se apruebe, quien ejerza la Presidencia de la República, al promulgar la ley, previo informe favorable del servicio o de la institución a través del cual se recaude el nuevo ingreso, refrendado por la Contraloría General de la República, deberá reducir
-proporcionalmente todos los gastos, cualquiera que sea su naturaleza.
-8. En la tramitación de la Ley de Presupuestos, así como respecto de los presupuestos regionales y comunales, se deberá garantizar la participación
-popular.
+7. Si la fuente de recursos otorgada por el Congreso de Diputadas y Diputados fuera insuficiente para financiar cualquier nuevo gasto que se apruebe, quien ejerza la Presidencia de la República, al promulgar la ley, previo informe favorable del servicio o de la institución a través del cual se recaude el nuevo ingreso, refrendado por la Contraloría General de la República, deberá reducir proporcionalmente todos los gastos, cualquiera que sea su naturaleza.
+8. En la tramitación de la Ley de Presupuestos, así como respecto de los presupuestos regionales y comunales, se deberá garantizar la participación popular.
 
 7,Procedimiento legislativo
 Artículo 278
