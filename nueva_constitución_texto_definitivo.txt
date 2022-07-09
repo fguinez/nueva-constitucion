@@ -1,4 +1,3 @@
-
 1,
 Artículo 1
 1. Chile es un Estado social y democrático de derecho. Es plurinacional, intercultural, regional y ecológico.
@@ -974,6 +973,7 @@ Artículo 164
 3. Dicho consejo está integrado por cinco consejeras y consejeros designados por la Presidenta o el Presidente de la República, con el acuerdo del Congreso de Diputadas y Diputados y de la Cámara de las Regiones, en sesión conjunta y por la mayoría de sus integrantes en ejercicio. Durarán ocho años en sus cargos, no podrán ser reelegidos y se renovarán por parcialidades cada cuatro años.
 4. Las consejeras y los consejeros solo podrán ser removidos por la Corte Suprema a requerimiento de la Presidenta o del Presidente de la República, de la mayoría absoluta de los miembros en ejercicio del Congreso de Diputadas y Diputados o de la Cámara de las Regiones, por infracción grave a la Constitución o a las leyes, incapacidad legal sobreviniente, mal comportamiento o negligencia manifiesta en el ejercicio de sus funciones. La Corte conocerá del asunto en pleno especialmente convocado al efecto y para acordar la remoción deberá reunir el voto conforme de la mayoría de sus integrantes.
 5. En lo referente a la democracia participativa y a los mecanismos consagrados en esta Constitución, es función del Servicio Electoral promover la información, educación y participación ciudadana o electoral en relación con tales procesos, en colaboración con otros organismos del Estado y la sociedad civil. También deberá velar por la implementación y la recta ejecución de estos mecanismos.
+
 5,
 Artículo 165
 1. El ejercicio de las funciones públicas obliga a sus titulares a dar cumplimiento a los principios de probidad, transparencia y rendición de cuentas en todas sus actuaciones. Además, se rige por los principios de eficiencia, eficacia, responsabilidad, publicidad, buena fe, interculturalidad, enfoque de género, inclusión, no discriminación y sustentabilidad.
@@ -1096,6 +1096,7 @@ Artículo 185
 5,
 Artículo 186
 El Estado fijará una política nacional portuaria, orientada por los principios de eficiencia en el uso del borde costero; responsabilidad ambiental, con especial énfasis en el cuidado de la naturaleza y bienes comunes naturales; participación pública en los recursos que genere la actividad; vinculación con el territorio y las comunidades en las cuales se emplacen los recintos portuarios; reconocimiento de la carrera profesional portuaria como trabajo de alto riesgo, y colaboración entre recintos e infraestructura portuaria para asegurar el oportuno abastecimiento de las comunidades.
+
 6,
 Artículo 187
 1. El Estado se organiza territorialmente en entidades territoriales autónomas y territorios especiales.
@@ -1778,6 +1779,7 @@ Artículo 278
 1. El Congreso de Diputadas y Diputados y la Cámara de las Regiones contarán con una Unidad Técnica dependiente administrativamente del Congreso.
 2. Su Secretaría Legislativa estará encargada de asesorar en los aspectos jurídicos de las leyes que tramiten. Podrá, asimismo, emitir informes sobre ámbitos de la legislación que hayan caído en desuso o que presenten problemas técnicos.
 3. Su Secretaría de Presupuestos estará encargada de estudiar el efecto presupuestario y fiscal de los proyectos de ley y de asesorar a diputadas, diputados y representantes regionales durante la tramitación de la Ley de Presupuestos.
+
 8,
 Artículo 279
 1. El gobierno y la administración del Estado corresponden a la Presidenta o al Presidente de la República, quien ejerce la jefatura de Estado y la jefatura de Gobierno.
@@ -1973,6 +1975,7 @@ Artículo 305
 8,
 Artículo 306
 Las medidas adoptadas en ejercicio de las facultades conferidas en los estados de excepción constitucional podrán ser objeto de revisión por los tribunales de justicia tanto en su mérito como en su forma. Las requisiciones que se practiquen darán lugar a indemnizaciones conforme a la ley.
+
 9,
 Artículo 307
 1. La jurisdicción es una función pública que se ejerce en nombre de los pueblos y que consiste en conocer y juzgar, por medio de un debido proceso, los conflictos de relevancia jurídica y hacer ejecutar lo resuelto, conforme a la Constitución y las leyes, así como a los tratados e instrumentos internacionales sobre derechos humanos de los que Chile es parte.
@@ -2221,6 +2224,7 @@ Artículo 349
 1. Los procedimientos disciplinarios serán conocidos y resueltos por una comisión compuesta por cinco integrantes del Consejo que se elegirán por sorteo, decisión que será revisable por su pleno a petición del afectado.
 2. La resolución del Consejo que ponga término al procedimiento será impugnable ante la Corte Constitucional.
 3. Las decisiones adoptadas conforme a los incisos anteriores no podrán ser revisadas ni impugnadas ante otros órganos del Sistema Nacional de Justicia.
+
 10,
 Artículo 350
 Todos los órganos autónomos se rigen por el principio de paridad. Se promueve la implementación de medidas de acción afirmativa, asegurando que al menos el cincuenta por ciento de sus integrantes sean mujeres.
@@ -2419,7 +2423,7 @@ Artículo 380
 Artículo 381
 1. La Corte Constitucional tendrá las siguientes atribuciones:
 a) Conocer y resolver la inaplicabilidad de un precepto legal cuyos efectos sean contrarios a la Constitución. 
-El tribunal que conoce de una gestión pendiente, de oficio o previa petición de parte, podrá plantear una cuestión de constitucionalidad respecto de un precepto legal decisorio para la resolución de dicho asunto. El pronunciamiento del juez en esta materia no lo inhabilitará para seguir conociendo el caso concreto. No procederá esta solicitud si el asunto está sometido al conocimiento de la Corte Suprema. La Corte Constitucional decidirá la cuestión de inaplicabilidad por mayoría de sus integrantes.        
+El tribunal que conoce de una gestión pendiente, de oficio o previa petición de parte, podrá plantear una cuestión de constitucionalidad respecto de un precepto legal decisorio para la resolución de dicho asunto. El pronunciamiento del juez en esta materia no lo inhabilitará para seguir conociendo el caso concreto. No procederá esta solicitud si el asunto está sometido al conocimiento de la Corte Suprema. La Corte Constitucional decidirá la cuestión de inaplicabilidad por mayoría de sus integrantes.
 b) Conocer y resolver sobre la inconstitucionalidad de un precepto legal.
 Si existen dos o más declaraciones de inaplicabilidad de un precepto legal conforme a la letra a) de este artículo, habrá acción pública para requerir a la Corte la declaración de inconstitucionalidad, sin perjuicio de la facultad de esta para declararla de oficio. Esta declaración de inconstitucionalidad se efectuará con el voto conforme de los tres quintos de las y los integrantes en ejercicio de la Corte Constitucional.
 Asimismo, la Corte Constitucional podrá declarar la inconstitucionalidad de un precepto legal, que hubiera sido declarado inaplicable previamente conforme a la letra a) de este artículo, a petición de la Presidenta o el Presidente de la República, de un tercio de quienes integren el Congreso de Diputadas y Diputados o la Cámara de las Regiones, de una gobernadora o un gobernador regional, o de a lo menos la mitad de las y los integrantes de una asamblea regional. Esta inconstitucionalidad será declarada por un quorum de cuatro quintos de sus integrantes en ejercicio.
@@ -2443,6 +2447,7 @@ Artículo 382
 2. La Corte Constitucional solo podrá acoger la inconstitucionalidad o la inaplicabilidad de un precepto cuando no sea posible interpretarlo de modo de evitar efectos inconstitucionales.
 3. Declarada la inaplicabilidad de un precepto legal, este no podrá ser aplicado en la gestión judicial en la que se originó la cuestión de constitucionalidad.
 4. La sentencia que declare la inconstitucionalidad de un precepto provocará su invalidación, excluyéndolo del ordenamiento jurídico a partir del día siguiente de la publicación de la sentencia en el Diario Oficial. Tiene carácter vinculante, de cumplimiento obligatorio para toda institución, persona o grupo, y contra ella no cabe recurso alguno.
+
 11,Reforma constitucional
 Artículo 383
 1. Los proyectos de reforma de la Constitución podrán ser iniciados por mensaje presidencial, moción de diputadas y diputados o representantes regionales, por iniciativa popular o iniciativa indígena.
