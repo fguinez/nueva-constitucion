@@ -1,3 +1,4 @@
+from collections import namedtuple
 from dotenv import dotenv_values
 from textwrap import wrap
 import businesstimedelta as btd
@@ -31,10 +32,13 @@ def print(*args, add_time=True, **kwargs):
         return builtins.print(*args, **kwargs)
 
 
+Chapther = namedtuple("Chapther", ["emoji", "name"])
+
+
 
 
 class Bot:
-    def __init__(self, filename, end_date, init_active_time, end_active_time, max_len=280):
+    def __init__(self, filename, end_date, init_active_time, end_active_time, max_len=280, chapters_filename=None):
         # Twitter
         if arguments.twitter:
             self.twitter = tweepy.Client(
@@ -49,6 +53,8 @@ class Bot:
         self.init_active_time = init_active_time
         self.end_active_time = end_active_time
         self.max_len = max_len
+        self.chapters_filename = chapters_filename
+        self.chapters = self.read_chapters()
         self.read_next_article()
         self.post_datetimes = None
         self.interval = None
@@ -67,6 +73,33 @@ class Bot:
         os.makedirs("tmp", exist_ok=True)
         with open('tmp/next_article.txt', 'w') as f:
             f.write(str(self.next_article))
+
+    def read_chapters(self):
+        '''
+        Lee los capítulos de un archivo CSV.
+
+        Parámetros
+        ----------
+
+        chapters_filename: str
+            Nombre del archivo CSV con los capítulos. Si es none, retorna un diccionario vacío.
+            El archivo debe seguir el siguiente formato:
+                1,<emoji_capítulo>,<nombre_capítulo>\n
+                ...\n
+                <número_capítulo>,<emoji_capítulo>,<nombre_capítulo>
+
+        Retorna
+        -------
+        dict
+            Un diccionario que tiene como llaves el número de los capítulos y como valores objetos namedtuple.Chapther con el emoji y el nombre del capítulo.
+        '''
+        chapters = dict()
+        if self.chapters_filename:
+            with open(self.chapters_filename, 'r') as f:
+                chapters = f.readlines()
+            chapters = (line.strip().split(',') for line in chapters)
+            chapters = {chapter[0]: Chapther(*chapter[1:]) for chapter in chapters}
+        return chapters
 
     def get_post_datetimes(self):
         '''
@@ -103,6 +136,85 @@ class Bot:
             for i, post_datetime in enumerate(self.post_datetimes, start=1):
                 f.write(f"art {i:03} | {post_datetime.strftime('%m-%d-%Y %H:%M:%S')}\n")
 
+    def get_tweets(self, art, max_len=280):
+        '''
+        Dado un artículo (srt), retorna una lista de tweets con el artículo.
+
+        Parámetros
+        ----------
+
+        art: str
+            Un string que contiene en su primera línea el cápitulo y apartado al que corresponde el artículo.
+            El resto del string es el texto del artículo.
+
+            Debe tener la siguiente forma:
+                <numero_capitulo>, <nombre_apartado>\n
+                <texto_artículo>\n
+                ...\n
+                <texto_artículo>
+        
+        max_len: int, opcional
+            La longitud máxima que puede tener cada tweet. Por defecto es 280.
+
+        Retorna
+        -------
+        list
+            Una lista de strings, donde cada elemento corresponde a un tweet.
+        '''
+        # Se eliminan los espacios en blanco en los extremos
+        art = art.strip()
+        # Se separa el artículo en su información y texto
+        info, art = art.split('\n', 1)
+        n_chapter, header = info.split(',')
+        # Se obtiene la información del capítulo correspondiente
+        chapter = self.chapters[n_chapter]
+        # Se añade el emoji del capítulo al inicio del artículo
+        art = f"{chapter.emoji} {art}"
+        # Si el artículo es muy corto, se devuelve un solo tweet
+        if len(art) <= max_len:
+            return [art]
+        # En caso contrario, se calculan los tweets necesarios
+        tweets = []
+        # Se resta de max_len es espacio necesario para codificar el índice de cada tweet
+        max_len -= len("\n\n[XX/XX]")
+        # Se separa el artículo en incisos
+        clauses = art.split('\n')
+        # Se recorren los incisos
+        i = 0
+        i_new = 0
+        while i < len(clauses):
+            actual_tweet = clauses[i]
+            # Si el inciso es corto, se intenta añadir otro inciso en el mismo tweet
+            if len(actual_tweet) <= max_len:
+                actual_tweet_new = actual_tweet
+                i_new = i
+                while len(actual_tweet_new) < max_len and i_new < len(clauses):
+                    actual_tweet = actual_tweet_new
+                    i = i_new
+                    i_new += 1
+                    if i_new < len(clauses):
+                        actual_tweet_new += '\n' + clauses[i_new]
+                tweets.append(actual_tweet)
+            # Si el inciso es muy largo, se divide en varios tweets
+            else:
+                incise_tweets = get_incise_tweets(actual_tweet, max_len - 2*len("..."))
+                tweets.extend(incise_tweets)
+            i += 1
+        # Añadimos el índice de cada tweet
+        tweets = list(tweet + f"\n\n[{i}/{len(tweets)}]" for i, tweet in enumerate(tweets, start=1))
+        # Añadimos un último tweet con la información referida al capítulo y título del artículo
+        context_tweet  = f"Este artículo es parte de:\n"
+        context_tweet += f"\n{chapter.emoji} {chapter.name}"
+        if header:
+            context_tweet += f"\n          Apartado: {header}"
+        context_tweet += f"\n\nPuedes leer la constitución completa en: chileconvencion.cl"
+        if len(context_tweet) <= max_len:
+            context_tweet = [context_tweet]
+        else:
+            context_tweet = get_incise_tweets(context_tweet, max_len - 2*len("..."))
+        tweets.extend(context_tweet)
+        return tweets
+
     def tweet(self, text, parent_tweet):
         '''
         Twittea un texto. Retorna el id del tweet generado.
@@ -115,7 +227,7 @@ class Bot:
         Publica un artículo en Twitter.
         '''
         print(f"Publicando artículo {self.next_article+1} en Twitter...", end=' ')
-        tweets = get_tweets(article, self.max_len)
+        tweets = self.get_tweets(article, self.max_len)
         actual_tweet = None
         for tweet_text in tweets:
             actual_tweet = self.tweet(tweet_text, parent_tweet=actual_tweet)
@@ -152,46 +264,6 @@ def get_arts(filename):
         arts = re.split("\n\n", text)
     return arts
 
-def get_tweets(art, max_len=280):
-    '''
-    Dado un artículo (srt), retorna una lista de tweets con el artículo.
-    '''
-    # Se eliminan los espacios en blanco en los extremos
-    art = art.strip()
-    # Si el artículo es muy corto, se devuelve un solo tweet
-    if len(art) <= max_len:
-        return [art]
-    # En caso contrario, se calculan los tweets necesarios
-    tweets = []
-    # Se resta de max_len es espacio necesario para codificar el índice de cada tweet
-    max_len -= len("\n\n[XX/XX]")
-    # Se separa el artículo en incisos
-    clauses = art.split('\n')
-    # Se recorren los incisos
-    i = 0
-    i_new = 0
-    while i < len(clauses):
-        actual_tweet = clauses[i]
-        # Si el inciso es corto, se intenta añadir otro inciso en el mismo tweet
-        if len(actual_tweet) <= max_len:
-            actual_tweet_new = actual_tweet
-            i_new = i
-            while len(actual_tweet_new) < max_len and i_new < len(clauses):
-                actual_tweet = actual_tweet_new
-                i = i_new
-                i_new += 1
-                if i_new < len(clauses):
-                    actual_tweet_new += '\n' + clauses[i_new]
-            tweets.append(actual_tweet)
-        # Si el inciso es muy largo, se divide en varios tweets
-        else:
-            incise_tweets = get_incise_tweets(actual_tweet, max_len - 2*len("..."))
-            tweets.extend(incise_tweets)
-        i += 1
-    # Añadimos el índice de cada tweet
-    tweets = list(tweet + f"\n\n[{i}/{len(tweets)}]" for i, tweet in enumerate(tweets, start=1))
-    return tweets
-
 def get_incise_tweets(incise, max_len):
     '''
     Dado un inciso, retorna una lista de tweets con el inciso.
@@ -214,12 +286,14 @@ def get_incise_tweets(incise, max_len):
 
 
 if __name__ == "__main__":
-    # Archivo a leer
-    filename = "borrador_nueva_constitución.txt"
+    # Archivos a leer
+    filename = "nueva_constitución_texto_definitivo.txt"
+    chapters_filename = "capitulos.csv"
     # Fecha en la que se publica el último tweet
-    end_date = dt.datetime(2022, 6, 29, 23, 30, 0)
-    # Los tweets solo se publican entre init_active_time y end_active_time
+    end_date = dt.datetime(2022, 8, 28, 23, 30, 0)
+    # Cada día, los tweets solo se publican entre init_active_time y end_active_time
     init_active_time = 8
     end_active_time =  24
-    bot = Bot(filename, end_date, init_active_time, end_active_time, max_len = 280)
+    bot = Bot(filename, end_date, init_active_time, end_active_time, max_len=280, chapters_filename=chapters_filename)
+
     bot.run()
