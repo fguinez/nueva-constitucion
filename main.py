@@ -1,4 +1,5 @@
 from collections import namedtuple
+from multiprocessing import get_context
 from dotenv import dotenv_values
 from textwrap import wrap
 import businesstimedelta as btd
@@ -168,11 +169,15 @@ class Bot:
         n_chapter, header = info.split(',')
         # Se obtiene la información del capítulo correspondiente
         chapter = self.chapters.get(n_chapter, Chapther('🇨🇱', 'Propuesta de Constitución Política de la República de Chile'))
+        # Generamos un tweet que contiene el capítulo y el apartado al cual corresponde el artículo
+        context_tweet = get_context_tweet(chapter, header, max_len=max_len)
         # Se añade el emoji del capítulo al inicio del artículo
         art = f"{chapter.emoji} {art}"
-        # Si el artículo es muy corto, se devuelve un solo tweet
+        # Si el artículo es muy corto, se devuelve un solo tweet de contenido y el tweet contextual
         if len(art) <= max_len:
-            return [art]
+            tweets = [art]
+            tweets.extend(context_tweet)
+            return tweets
         # En caso contrario, se calculan los tweets necesarios
         tweets = []
         # Se resta de max_len es espacio necesario para codificar el índice de cada tweet
@@ -203,15 +208,6 @@ class Bot:
         # Añadimos el índice de cada tweet
         tweets = list(tweet + f"\n\n[{i}/{len(tweets)}]" for i, tweet in enumerate(tweets, start=1))
         # Añadimos un último tweet con la información referida al capítulo y título del artículo
-        context_tweet  = f"Este artículo es parte de:\n"
-        context_tweet += f"\n{chapter.emoji} {chapter.name}"
-        if header:
-            context_tweet += f"\n          Apartado: {header}"
-        context_tweet += f"\n\nPuedes leer la constitución completa en: chileconvencion.cl"
-        if len(context_tweet) <= max_len:
-            context_tweet = [context_tweet]
-        else:
-            context_tweet = get_incise_tweets(context_tweet, max_len - 2*len("..."))
         tweets.extend(context_tweet)
         return tweets
 
@@ -284,6 +280,38 @@ def get_incise_tweets(incise, max_len):
                 tweets[i] = tweets[i] + "..."
     return tweets
 
+def get_context_tweet(chapter, header, max_len=280):
+    '''
+    Retorna un tweet con la información referida al capítulo y título de un artículo.
+    
+    Parámetros
+    ----------
+
+    chapter: namedtuple.Chapther
+        Un objeto Chapter con la información del capítulo.
+    
+    header: str
+        Un string con el nombre del apartada dentro del capítulo al cual corresponde el artículo
+
+    max_len: int, opcional
+        El número máximo de caracteres que puede tener un tweet.
+
+    Retorna
+    -------
+
+    list
+        Una lista con los tweets correspondientes a la información contextual del artículo.
+    '''
+    context_tweet  = f"Este artículo es parte de:\n"
+    context_tweet += f"\n{chapter.emoji} {chapter.name}"
+    if header:
+        context_tweet += f"\n          Apartado: {header}"
+    context_tweet += f"\n\nPuedes leer la constitución completa en: chileconvencion.cl"
+    if len(context_tweet) <= max_len:
+        context_tweet = [context_tweet]
+    else:
+        context_tweet = get_incise_tweets(context_tweet, max_len - 2*len("..."))
+    return context_tweet
 
 if __name__ == "__main__":
     # Archivos a leer
@@ -296,7 +324,7 @@ if __name__ == "__main__":
     end_active_time =  24
     bot = Bot(filename, end_date, init_active_time, end_active_time, max_len=280, chapters_filename=chapters_filename)
 
-    # Descomentar para probar separación en tweets en terminal
+    # # Descomentar para probar separación en tweets en terminal
     # import random
     # arts = get_arts(filename)
     # bot.arts = arts
