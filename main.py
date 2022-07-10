@@ -134,7 +134,7 @@ class Bot:
         '''
         os.makedirs("tmp", exist_ok=True)
         with open('tmp/post_datetimes.txt', 'w') as f:
-            for i, post_datetime in enumerate(self.post_datetimes, start=1):
+            for i, post_datetime in enumerate(self.post_datetimes, start=self.next_article+1):
                 f.write(f"art {i:03} | {post_datetime.strftime('%m-%d-%Y %H:%M:%S')}\n")
 
     def get_tweets(self, art, max_len=280):
