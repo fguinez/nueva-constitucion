@@ -33,7 +33,8 @@ def print(*args, add_time=True, **kwargs):
         return builtins.print(*args, **kwargs)
 
 
-Chapther = namedtuple("Chapther", ["emoji", "name"])
+Chapter = namedtuple("Chapter", ["emoji", "name"])
+default_chapter = Chapter('🇨🇱', 'Propuesta de Constitución Política de la República de Chile')
 
 
 
@@ -92,14 +93,14 @@ class Bot:
         Retorna
         -------
         dict
-            Un diccionario que tiene como llaves el número de los capítulos y como valores objetos namedtuple.Chapther con el emoji y el nombre del capítulo.
+            Un diccionario que tiene como llaves el número de los capítulos y como valores objetos namedtuple.Chapter con el emoji y el nombre del capítulo.
         '''
         chapters = dict()
         if self.chapters_filename:
             with open(self.chapters_filename, 'r') as f:
                 chapters = f.readlines()
             chapters = (line.strip().split(',') for line in chapters)
-            chapters = {chapter[0]: Chapther(*chapter[1:]) for chapter in chapters}
+            chapters = {chapter[0]: Chapter(*chapter[1:]) for chapter in chapters}
         return chapters
 
     def get_post_datetimes(self):
@@ -168,7 +169,7 @@ class Bot:
         info, art = art.split('\n', 1)
         n_chapter, header = info.split(',')
         # Se obtiene la información del capítulo correspondiente
-        chapter = self.chapters.get(n_chapter, Chapther('🇨🇱', 'Propuesta de Constitución Política de la República de Chile'))
+        chapter = self.chapters.get(n_chapter, default_chapter)
         # Generamos un tweet que contiene el capítulo y el apartado al cual corresponde el artículo
         context_tweet = get_context_tweet(chapter, header, max_len=max_len)
         # Se añade el emoji del capítulo al inicio del artículo
@@ -180,10 +181,12 @@ class Bot:
             return tweets
         # En caso contrario, se calculan los tweets necesarios
         tweets = []
-        # Se resta de max_len es espacio necesario para codificar el índice de cada tweet
+        # Se resta de max_len el espacio necesario para codificar el índice de cada tweet
         max_len -= len("\n\n[XX/XX]")
         # Se separa el artículo en incisos
         clauses = art.split('\n')
+        # Se junta el número del artículo con el primer inciso
+        clauses[:2] = [clauses[0]+'+'+clauses[1]]
         # Se recorren los incisos
         i = 0
         i_new = 0
@@ -209,6 +212,8 @@ class Bot:
         tweets = list(tweet + f"\n\n[{i}/{len(tweets)}]" for i, tweet in enumerate(tweets, start=1))
         # Añadimos un último tweet con la información referida al capítulo y título del artículo
         tweets.extend(context_tweet)
+        # Añadimos un salto de línea en el primer tweet para separar el número de artículo
+        tweets[0] = tweets[0].replace('+', '\n', 1)
         return tweets
 
     def tweet(self, text, parent_tweet):
@@ -287,7 +292,7 @@ def get_context_tweet(chapter, header, max_len=280):
     Parámetros
     ----------
 
-    chapter: namedtuple.Chapther
+    chapter: namedtuple.Chapter
         Un objeto Chapter con la información del capítulo.
     
     header: str
@@ -330,10 +335,12 @@ if __name__ == "__main__":
     # bot.arts = arts
     # # random art
     # n = random.randint(0, len(arts))
-    # tweets = bot.get_tweets(arts[n])
-    # for tweet in tweets:
-    #     print(tweet, add_time=False)
-    #     print("-"*80, add_time=False)
+    # for n in range(17):
+    #     tweets = bot.get_tweets(arts[n])
+    #     for tweet in tweets:
+    #         print(tweet, add_time=False)
+    #         print("-"*80, add_time=False)
+    #     print("■"*80, add_time=False)
     # exit()
 
     bot.run()
